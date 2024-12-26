@@ -7,11 +7,20 @@
     <persistence-unit name="myPU">
         <properties>
             <property name="connection.driver_class" value="org.h2.Driver"/>
-            <property name="hibernate.connection.url" value="jdbc:h2:./db/baza"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:./study"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <!--
+            Wartość hibernate.hbm2ddl.auto w konfiguracji Hibernate określa, jak Hibernate ma zarządzać schematem bazy danych. Oto dostępne opcje:
+                create: Tworzy nową bazę danych przy każdym uruchomieniu aplikacji. Wszystkie istniejące dane zostaną usunięte.
+                create-drop: Tworzy nową bazę danych przy uruchomieniu aplikacji, a następnie usuwa ją, gdy aplikacja zostanie zamknięta.
+                update: Aktualizuje istniejący schemat bazy danych, dodając nowe tabele i kolumny, ale nie usuwa istniejących danych.
+                validate: Sprawdza, czy schemat bazy danych jest zgodny z mapowaniem Hibernate. Nie wprowadza żadnych zmian w bazie danych.
+                none: Nie wykonuje żadnych operacji związanych ze schematem bazy danych.
+            W środowisku produkcyjnym zazwyczaj używa się opcji validate lub none, aby uniknąć niezamierzonych zmian w schemacie bazy danych.
+            -->
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-            <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.use_sql_comments" value="true" />
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>
