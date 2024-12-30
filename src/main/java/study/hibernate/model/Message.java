@@ -12,6 +12,11 @@ public class Message {
     private Long id;
     private String text;
 
+    /*
+    Klucz główny nigdy się nie zmienia, dlatego nie należy, pozwalać na modyfikowanie tej wartości
+    więc nie powinno się dla niej tworzyć setera.
+    */
+
     public String getText() {
         return text;
     }
