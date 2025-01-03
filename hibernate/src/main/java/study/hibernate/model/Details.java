@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 /*
 * Ta klasa zostanie połączona do
 * */
-//@Embeddable
+@Embeddable
 public class Details {
 
     private String description;

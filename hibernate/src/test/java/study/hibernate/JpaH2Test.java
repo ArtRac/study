@@ -36,7 +36,7 @@ class JpaH2Test {
     }
 
     @Test
-    void message_OneTableSetGet() {
+    void messageOneTableSetGet() {
         et.begin();
         Message message = new Message();
         message.setText("Działa!");
@@ -53,7 +53,7 @@ class JpaH2Test {
     }
 
     @Test
-    void AuthorAndBookWithDetailsType() {
+    void authorAndBookWithDetailsType() {
         et.begin();
 
         Author author = new Author();
