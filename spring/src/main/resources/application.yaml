@@ -1,0 +1,44 @@
+#https://docs.spring.io/spring-boot/appendix/application-properties/index.html
+server:
+#  port: 8080
+spring:
+  application.name: spring
+  jpa:
+    defer-datasource-initialization: true
+  #        hibernate:
+  #            ddl-auto: create
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      path: /h2
+#https://docs.spring.io/spring-boot/reference/features/logging.html
+logging:
+  #level is one of TRACE, DEBUG, INFO, WARN, ERROR, FATAL, or OFF
+  level:
+    root: "info"
+    #org.springframework.web: "debug"
+    #org.hibernate: "error"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#Sposób wstrzykiwania właściwości.
+#@Value("${value.from.file}")
+#private String valueFromFile;
+
+#We can also configure a different file at runtime if we need to, using an environment property:
+#java -jar app.jar --spring.config.location=classpath:/another-location.properties
+#or
+#java -jar app.jar --spring.config.location=config/*/
+
+#W środowisku produkcyjnym aktywny profil można wybrać za pomocą ...
+#% export SPRING_PROFILES_ACTIVE=prod
+#Uruchamiany wówczas jest plik application-prod.yml
