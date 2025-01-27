@@ -2,9 +2,10 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+.venv/
 
 ### IntelliJ IDEA ###
-/.idea/
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -33,6 +34,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/.idea/
 /hibernate/study.mv.db
 /hibernate/study.trace.db
