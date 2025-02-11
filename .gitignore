@@ -4,6 +4,8 @@ target/
 !**/src/test/**/target/
 .venv/
 
+*.db
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws
@@ -34,5 +36,3 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/hibernate/study.mv.db
-/hibernate/study.trace.db
