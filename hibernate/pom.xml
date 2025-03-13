@@ -8,7 +8,7 @@
         <artifactId>study</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <artifactId>hibernate</artifactId>
 
     <properties>

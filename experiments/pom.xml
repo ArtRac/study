@@ -9,7 +9,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <packaging>pom</packaging>
-
     <groupId>org.study</groupId>
     <artifactId>experiments</artifactId>
     <version>1.0-SNAPSHOT</version>
